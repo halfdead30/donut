@@ -1,0 +1,121 @@
+.services {
+
+    .row {
+        height: 500px;
+
+        @media (max-width: 992px) {
+            height: 100%;
+            padding-top: 230px;
+        }
+
+    }
+
+    &-item {
+        @include col();
+        @include size(4);
+        text-align: center;
+        align-self: flex-end;
+
+        @media (max-width: 992px) {
+            width: calc(100% - 30px);
+            padding-top: 300px;
+        }
+
+        @media (max-width: 767px) {
+            width: calc(100% - 30px);
+            padding-top: 260px;
+        }
+
+        &--ultricies {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include sprite($headphones);
+            }
+        }
+
+        &--porttitor {
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include sprite($computer);
+            }
+
+        }
+
+        &--curabitur {
+
+            @media (max-width: 767px) {
+                padding-top: 240px;
+            }
+
+            @media (max-width: 559px) {
+                padding-top: 200px;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include sprite($camera);
+            }
+
+        }
+
+        .heading-3 {
+            padding: 110px 0 30px;
+
+            @media (max-width: 559px) {
+                padding-bottom: 20px;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 5px;
+                height: 25px;
+                background-color: #000;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 5px;
+                height: 25px;
+                background-color: #000;
+            }
+
+        }
+
+        .section-text {
+            font-size: 1rem;
+            line-height: 1.5;
+
+            @media (max-width: 559px) {
+                font-size: 0.875rem;
+            }
+        }
+
+    }
+
+}

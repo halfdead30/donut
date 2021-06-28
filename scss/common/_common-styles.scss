@@ -1,0 +1,320 @@
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/preloader.gif') no-repeat;
+	background-position: center;
+	background-color: #ffd618;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.preloader.loaded {
+	display: none;
+}
+
+.slide-bg {
+	width: 100%;
+}
+
+.swiper-pagination-bullet {
+	display: block;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 50%;
+	left: 90%;
+	transform: translateY(50%);
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 0 11px;
+	width: 19px;
+	height: 19px;
+	border: 6px solid #fff;
+	background-color: transparent;
+
+	@media (max-width: 559px) {
+		width: 12px;
+		height: 12px;
+		border: 3px solid #fff;
+	}
+}
+
+.fancybox-navigation {
+	top: 50%;
+}
+
+.heading-1 {
+	font-family: $boldFont;
+	font-size: 3.75rem;
+	line-height: 1.2;
+
+	@media (max-width: 992px) {
+		font-size: 1.7rem;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 1.4rem;
+	}
+
+	@media (max-width: 559px) {
+		font-size: 1rem;
+	}
+}
+
+.heading-3 {
+	font-family: $boldFont;
+	font-size: 1.125rem;
+}
+
+.btn {
+	font-family: $boldFont;
+	font-size: 1.125rem;
+	display: inline-block;
+	cursor: pointer;
+	border: 4px solid #000;
+	border-radius: 20px;
+	padding: 13px 25px;
+
+	@media (max-width: 559px) {
+		font-size: 0.875rem;
+		border: 2px solid #000;
+		padding: 6px;
+	}
+
+	&-more {
+		background-color: $formBgColor;
+	}
+
+	&-load {
+		background-color: #fff;
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			background-color: $formBgColor;
+		}
+
+	}
+
+	&-send {
+		background-color: $formBgColor;
+		display: block;
+		padding: 13px 50px;
+		margin: 40px auto 0;
+
+		@media (max-width: 992px) {
+			margin: 20px auto 0;
+		}
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 12px;
+		left: -80px;
+		width: 300px;
+		height: 5px;
+		background-color: #000;
+		z-index: -1;
+
+		@media (max-width: 559px) {
+			display: none;
+		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 22px;
+		left: -50px;
+		width: 300px;
+		height: 5px;
+		background-color: #000;
+		z-index: -1;
+
+		@media (max-width: 992px) {
+			width: 250px;
+		}
+
+		@media (max-width: 559px) {
+			display: none;
+		}
+	}
+
+}
+
+.section-header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 140px;
+
+	@media (max-width: 992px) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 559px) {
+		margin-bottom: 0;
+	}
+}
+
+.section-col {
+	width: 45%;
+
+	@media (max-width: 992px) {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.section-title {
+	display: inline-block;
+	font-family: $boldFont;
+	font-size: 4.75rem;
+	padding-bottom: 35px;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 90%;
+		height: 5px;
+		background-color: #000;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		width: 90%;
+		height: 5px;
+		background-color: #000;
+	}
+
+	@media (max-width: 992px) {
+		margin-bottom: 30px;
+	}
+
+	@media (max-width: 559px) {
+		font-size: 3.3rem;
+	}
+
+}
+
+.section-text {
+	font-family: $mainFont;
+	font-weight: 300;
+	font-size: 1.125rem;
+	line-height: 1.6;
+
+	@media (max-width: 992px) {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 992px) {
+		font-size: 0.875rem;
+	}
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+.form-control {
+	font-family: inherit;
+	border: 6px solid #000;
+	border-radius: 20px;
+	background-color: $formBgColor;
+	display: inline-block;
+	font-size: 1.125rem;
+	padding: 20px;
+	width: 100%;
+	margin: 13px 0 20px;
+}
+
+.form-label {
+	font-family: $boldFont;
+	margin-left: 12px;
+}
+
+#message {
+	height: 194px;
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+	font-family: $boldFont;
+	font-size: 3rem;
+}
+
+.odometer + span {
+	font-family: $boldFont;
+	font-size: 3rem;
+	vertical-align: middle;
+}
+
+.hamburger {
+	position: fixed;
+	top: 20px;
+	right: 8%;
+	display: none;
+	cursor: pointer;
+	z-index: 99;
+
+	@media (max-width: 992px) {
+		display: inline-block;
+	}
+
+	@media (max-width: 559px) {
+		top: 10px;
+		right: 4%;
+	}
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+
+	@media (max-width: 559px) {
+		width: 25px;
+		height: 3px;
+	}
+}
+
+.active .bar1 {
+	transform: rotate(-45deg) translate(-9px, 6px);
+
+	@media (max-width: 559px) {
+		width: 25px;
+		height: 3px;
+		transform: rotate(-45deg) translate(-6px, 6px);
+	}
+}
+
+.active .bar2 {
+	opacity: 0;
+}
+
+.active .bar3 {
+	transform: rotate(45deg) translate(-8px, -8px);
+
+	@media (max-width: 559px) {
+		transform: rotate(45deg) translate(-6px, -8px);
+	}
+}

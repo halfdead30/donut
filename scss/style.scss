@@ -1,0 +1,95 @@
+// Variables
+@import "variables/variables";
+
+// Mixins
+@import "mixins/sprite";
+
+// Libs
+@import "libs/libs";
+
+html {
+	box-sizing: border-box;
+	font-size: $fsDefault;
+}
+
+*,
+*::before,
+*::after {
+	position: relative;
+	box-sizing: inherit;
+}
+
+body {
+	font: 400 1rem/1 $mainFont, sans-serif;
+	margin: 0;
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	display: inline-block;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	padding: 120px 0 100px;
+	
+	@media (max-width: 992px) {
+		padding: 60px 0 40px;
+	}
+
+	@media (max-width: 559px) {
+		padding: 30px 0;
+	}
+}
+
+textarea {
+	resize: none;
+	outline: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Grid
+@import "grid/smart-grid";
+
+.container {
+	@include container();
+}
+
+.row {
+	@include row();
+}
+
+// Common styles
+@import "common/common-styles";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/top-baner";
+@import "blocks/services";
+@import "blocks/works";
+@import "blocks/about";
+@import "blocks/contact";
+@import "blocks/footer";
